@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
   def create
     User.create(user_params)
-    # 以下のメソッドを追加
     redirect_to action: :index
   end
 
@@ -20,14 +19,12 @@ class UsersController < ApplicationController
   def update
     user = User.find(params[:id])
     user.update(user_params)
-    # 以下のメソッドを追加
     redirect_to action: :index
   end
 
   def destroy
     user = User.find(params[:id])
     user.destroy
-    # 以下のメソッドを追加
     redirect_to action: :index
   end
 
